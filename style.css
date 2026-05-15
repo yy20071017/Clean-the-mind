@@ -1,0 +1,293 @@
+html {
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background:
+        linear-gradient(to bottom right, #07010f, #12041f, #07010f);
+    color: white;
+    font-family: 'Noto Sans SC', sans-serif;
+    overflow-x: hidden;
+}
+
+/* 背景光 */
+
+.light {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: -1;
+}
+
+.light1 {
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 0, 150, 0.2);
+    top: 100px;
+    left: -100px;
+}
+
+.light2 {
+    width: 500px;
+    height: 500px;
+    background: rgba(140, 0, 255, 0.2);
+    bottom: -100px;
+    right: -100px;
+}
+
+/* 导航栏 */
+
+header {
+    width: 100%;
+    padding: 25px 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.05);
+
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 900;
+    color: #ffb3f5;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 40px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff8be7;
+}
+
+/* 首页 */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.small-title {
+    letter-spacing: 10px;
+    color: #ffb3f5;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 120px;
+    font-weight: 900;
+
+    background: linear-gradient(to right, #ffd6fa, #ffffff, #d7b6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    margin-bottom: 40px;
+}
+
+.hero-box {
+    width: 800px;
+    max-width: 90%;
+
+    padding: 40px;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(20px);
+
+    line-height: 40px;
+    font-size: 22px;
+    color: #e8e8e8;
+}
+
+.buttons {
+    margin-top: 50px;
+}
+
+button {
+    padding: 18px 40px;
+    border: none;
+    border-radius: 50px;
+
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn1 {
+    background: linear-gradient(to right, #ff4fd8, #8f4fff);
+    color: white;
+    margin-right: 20px;
+
+    box-shadow: 0 0 30px rgba(255,0,150,0.5);
+}
+
+.btn1:hover {
+    transform: scale(1.08);
+}
+
+.btn2 {
+    background: rgba(255,255,255,0.08);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.btn2:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+/* 成员 */
+
+.members {
+    padding: 100px 80px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.title h2 {
+    font-size: 60px;
+    color: #ffb3f5;
+}
+
+.title p {
+    color: #aaa;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.card-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 350px;
+
+    background: rgba(255,255,255,0.08);
+
+    border-radius: 35px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    backdrop-filter: blur(20px);
+
+    transition: 0.5s;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    border-color: #ff8be7;
+}
+
+.card img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card-text {
+    padding: 30px;
+}
+
+.card-text h3 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.card-text p {
+    color: #d4d4d4;
+    line-height: 32px;
+    margin-bottom: 25px;
+}
+
+.quote {
+    padding: 18px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.06);
+
+    color: #ffcaef;
+
+    line-height: 30px;
+}
+
+/* 关于 */
+
+.about {
+    margin: 100px 80px;
+
+    padding: 70px;
+
+    border-radius: 40px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    backdrop-filter: blur(20px);
+}
+
+.about h2 {
+    font-size: 60px;
+    margin-bottom: 40px;
+    color: #dcb8ff;
+}
+
+.about p {
+    font-size: 22px;
+    color: #d8d8d8;
+    line-height: 45px;
+}
+
+/* 页脚 */
+
+footer {
+    padding: 40px;
+    text-align: center;
+    color: #888;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
